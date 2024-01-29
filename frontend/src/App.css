@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #171717;
+}
+li {
+  list-style-type: none;
+}
+
+h1,
+h2 {
+  color: #171717;
+}
+p {
+  color: #6b7280;
+}
+img {
+  max-width: 100%;
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 0.4rem 2rem 0.4rem;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+header .logo {
+  color: black;
+  line-height: 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 1.2rem;
+}
+
+/*post*/
+.posts {
+  padding-left: 0;
+}
+
+.before-post {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.before-post h1 {
+  font-size: 3.75rem;
+  line-height: 3.5rem;
+  margin: 0;
+}
+
+.before-post p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.single-post-wrapper {
+  margin-bottom: 1rem;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  .single-post-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.right-side {
+  grid-column: span 3 / span 3;
+}
+
+.right-side a {
+  color: #14b8a6;
+}
+
+.left-side {
+  margin-top: 0.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .right-side {
+    margin-top: -1.5rem;
+  }
+  .right-side h2 {
+    margin: 0;
+  }
+  .left-side p {
+    margin: 0;
+  }
+  .before-post h1 {
+    font-size: 40px;
+  }
+  .before-post p {
+    font-size: 17px;
+  }
+  .right-side p {
+    margin: 0;
+  }
+}
+
+/*login and register page*/
+
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+  font-weight: 600;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+form.login h1,
+form.register h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  margin-bottom: 7px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  display: block;
+  border: 0;
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+  cursor: pointer;
+}
+
+/*post page*/
+
+.post-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.post-page .post-image {
+  max-height: 350px;
+  display: flex;
+  overflow: hidden;
+}
+
+.post-image img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.post-page h1 {
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .post-page h1 {
+    font-size: 30px;
+  }
+  .post-page h2 {
+    font-size: 19px;
+  }
+}
+
+.post-page .author {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.post-page time {
+  text-align: center;
+  color: #6b7280;
+  display: block;
+}
+
+.post-page .content-para p {
+  line-height: 2rem;
+}
+
+/*edit page*/
+.authEdit {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-post {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-post .btn {
+  background-color: #000;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 0 0;
+  overflow: visible;
+  padding: 12px 20px;
+  display: block;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.edit-post .btn:focus {
+  text-decoration: none;
+}
+
+.edit-post .btn:hover {
+  text-decoration: none;
+}
+
+.edit-post .btn:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.edit-post .btn:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .edit-post .btn {
+    padding: 12px 50px;
+  }
+}
+
+
+.before-footer{
+  border-top: 1px solid #e5e5e5;
+  padding-top: 30px;
+}
